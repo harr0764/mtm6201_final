@@ -8,28 +8,39 @@
     <style>
         /* Custom styles */
         .navbar-search input[type="text"] {
-            width: 300px; /* Adjust the width of the search bar */
+            width: 600px; 
+        }
+        .nav-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
         }
         .nav-links a {
-            color: white; /* Change text color of nav buttons to white */
+            color: white;
+            width: 100%;
+            text-align: center;
         }
         h1 {
-            color: blue; /* Change color of h1 text to blue */
-            font-size: 2.5rem; /* Increase font size of h1 */
+            color: blue; 
+            font-size: 2.5rem; 
+            text-align: center;
         }
         .footer-left, .footer-center, .footer-right {
-            flex: 1; /* Equal width for footer content */
+            flex: 1; 
         }
         footer {
-            border-top: 2px solid blue; /* Add a thick blue border on top of the footer */
+            border-top: 2px solid blue; 
         }
+
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <div id="top" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <!-- Logo -->
-        <img src="images/logo.jpg" alt="Logo" class="navbar-logo" role="img" aria-label="Logo" itemprop="logo">
+        <img src="images/logo.jpg" alt="Logo" class="navbar-logo" role="img" aria-label="Logo" itemprop="logo" class="logo-pic">
         <!-- Search bar -->
         <div class="navbar-search" role="search">
             <input type="text" placeholder="Search" role="textbox" itemprop="query-input">
@@ -57,14 +68,19 @@
         
         <!-- Introduction paragraph -->
         <p itemprop="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+            Welcome to Greenview Hospital!
+            At Greenview, we're proud to be more than just a healthcare facility; we're a beacon of compassion, excellence, and innovation in our community. Whether you're seeking medical treatment, exploring career opportunities, or simply seeking information, you've come to the right place.
+            For our patients, our user-friendly patient login portal offers a seamless experience, allowing you to access medical records, schedule appointments, and communicate with healthcare providers at your convenience. As a member of our esteemed staff, our staff login page provides access to a wealth of resources, fostering collaboration, professional growth, and excellence in patient care. Have questions or need assistance? Our dedicated contact page is staffed by friendly professionals ready to assist you every step of the way.
+
+            Thank you for entrusting Greenview Hospital with your health and well-being. We're honored to serve you and our community with integrity, compassion, and dedication, striving to make a positive impact one patient at a time. Welcome to Greenview, where your health is our priority.
+
         </p>
         
         <!-- Images -->
         <div class="image-container" role="presentation" itemprop="image">
             <img src="images/image1.avif" alt="Image 1" class="img-fluid" role="img">
-            <img src="image2.jpg" alt="Image 2" class="img-fluid" role="img">
-            <img src="image3.jpg" alt="Image 3" class="img-fluid" role="img">
+            <img src="images/image2.avif" alt="Image 2" class="img-fluid" role="img">
+            <img src="images/image3.avif" alt="Image 3" class="img-fluid" role="img">
         </div>
     </div>
     <a href="#top" class="skip-link">Back to Top</a>

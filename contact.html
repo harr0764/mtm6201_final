@@ -8,33 +8,61 @@
     <style>
         /* Custom styles */
         .navbar-search input[type="text"] {
-            width: 300px; /* Adjust the width of the search bar */
+            width: 600px; 
+        }
+        .nav-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
         }
         .nav-links a {
-            color: white; /* Change text color of nav buttons to white */
+            color: white;  
+            width: 100%;
+            text-align: center;
         }
         h1 {
-            color: blue; /* Change color of h1 text to blue */
-            font-size: 2.5rem; /* Increase font size of h1 */
+            color: blue; 
+            font-size: 2.5rem; 
+            text-align: center;
         }
         .footer-left, .footer-center, .footer-right {
-            flex: 1; /* Equal width for footer content */
+            flex: 1; 
         }
         footer {
-            border-top: 2px solid blue; /* Add a thick blue border on top of the footer */
+            border-top: 2px solid blue; 
         }
-        /* Center form content */
+
         .form-container {
             display: flex;
             justify-content: center;
+            margin: 0 auto; 
         }
-        /* Make all input fields same width */
+
         form input[type="text"],
         form input[type="email"],
         form input[type="tel"],
         form textarea {
             width: 100%;
             margin-bottom: 10px;
+            background-color: white;
+        }
+        
+        form {
+            background-color: blue; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        form label {
+            display: none; 
+        }
+
+        form input[type="submit"] {
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -42,7 +70,7 @@
     <!-- Navbar -->
     <div id="top" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <!-- Logo -->
-        <img src="images/logo.jpg" alt="Logo" role="img" aria-label="Logo" itemprop="logo">
+        <img src="images/logo.jpg" alt="Logo" role="img" aria-label="Logo" itemprop="logo" class="logo-pic">
         
         <!-- Search bar -->
         <div class="navbar-search" role="search">
@@ -73,16 +101,16 @@
         <div class="form-container">
             <form role="form" itemprop="mainEntity">
                 <label for="name" itemprop="name">Name:</label><br>
-                <input type="text" id="name" name="name" role="textbox"><br>
+                <input type="text" id="name" name="name" placeholder="Name" role="textbox"><br>
                 
                 <label for="email" itemprop="email">Email:</label><br>
-                <input type="email" id="email" name="email" role="textbox"><br>
+                <input type="email" id="email" name="email" placeholder="Email" role="textbox"><br>
                 
                 <label for="phone" itemprop="telephone">Phone:</label><br>
-                <input type="tel" id="phone" name="phone" role="textbox"><br>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" role="textbox"><br>
                 
                 <label for="message" itemprop="text">Message:</label><br>
-                <textarea id="message" name="message" rows="4" role="textbox"></textarea><br>
+                <textarea id="message" name="message" placeholder="Message" rows="4" role="textbox"></textarea><br>
                 
                 <input type="submit" value="Submit" role="button" class="btn btn-primary">
             </form>
@@ -111,6 +139,6 @@
             <a href="#" role="link" itemprop="url">Staff Log In</a>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin></script>
 </body>
 </html>
