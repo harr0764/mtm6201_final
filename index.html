@@ -1,72 +1,92 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
+    <style>
+        /* Custom styles */
+        .navbar-search input[type="text"] {
+            width: 300px; /* Adjust the width of the search bar */
+        }
+        .nav-links a {
+            color: white; /* Change text color of nav buttons to white */
+        }
+        h1 {
+            color: blue; /* Change color of h1 text to blue */
+            font-size: 2.5rem; /* Increase font size of h1 */
+        }
+        .footer-left, .footer-center, .footer-right {
+            flex: 1; /* Equal width for footer content */
+        }
+        footer {
+            border-top: 2px solid blue; /* Add a thick blue border on top of the footer */
+        }
+    </style>
+</head>
 <body>
     <!-- Navbar -->
-    <div class="navbar">
+    <div id="top" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <!-- Logo -->
-        <img src="images/logo.jpg" alt="Logo">
-        
+        <img src="images/logo.jpg" alt="Logo" class="navbar-logo" role="img" aria-label="Logo" itemprop="logo">
         <!-- Search bar -->
-        <div class="navbar-search">
-            <input type="text" placeholder="Search">
-            <span class="search-icon">&#128269;</span>
+        <div class="navbar-search" role="search">
+            <input type="text" placeholder="Search" role="textbox" itemprop="query-input">
+            <span class="search-icon" role="button" aria-label="Search" itemprop="search-action">&#128269;</span>
         </div>
 
         <!-- Need help button -->
-        <button class="need-help-btn">Need Help?</button>
+        <button class="need-help-btn" role="button">Need Help?</button>
 
         <!-- Navigation buttons -->
-        <div class="nav-links">
-            <a href="index.html">Home</a> <!-- Link to homepage -->
-            <a href="contact.html">Contact Us</a> <!-- Link to contact page -->
-            <a href="#">Patient Log In</a>
-            <a href="#">Staff Log In</a>
+        <div class="nav-links" role="navigation">
+            <a href="index.html" role="link" itemprop="url" class="btn btn-primary">Home</a> <!-- Link to homepage -->
+            <a href="contact.html" role="link" itemprop="url" class="btn btn-primary">Contact Us</a> <!-- Link to contact page -->
+            <a href="#" role="link" itemprop="url" class="btn btn-primary">Patient Log In</a>
+            <a href="#" role="link" itemprop="url" class="btn btn-primary">Staff Log In</a>
         </div>
     </div>
+    <a href="#footer" class="skip-link">Skip to Footer</a>
+
 
     <!-- Main content -->
-    <div class="main-content">
+    <div class="main-content" role="main" itemscope itemtype="http://schema.org/WebPageElement">
         <!-- Heading -->
-        <h1>Hello, and welcome to Greenview Hospital</h1>
+        <h1 itemprop="headline">Hello, and welcome to Greenview Hospital</h1>
         
         <!-- Introduction paragraph -->
-        <p>
+        <p itemprop="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
         </p>
         
         <!-- Images -->
-        <div class="image-container">
-            <img src="images/image1.avif" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
+        <div class="image-container" role="presentation" itemprop="image">
+            <img src="images/image1.avif" alt="Image 1" class="img-fluid" role="img">
+            <img src="image2.jpg" alt="Image 2" class="img-fluid" role="img">
+            <img src="image3.jpg" alt="Image 3" class="img-fluid" role="img">
         </div>
     </div>
-
+    <a href="#top" class="skip-link">Back to Top</a>
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" id="footer" class="d-flex">
         <!-- Left side: Address and phone number -->
-        <div class="footer-left">
-            <p>123 Main Street, City, State, ZIP</p>
-            <p>Phone: 123-456-7890</p>
+        <div class="footer-left" role="contentinfo" itemscope itemtype="http://schema.org/PostalAddress">
+            <p itemprop="streetAddress">32 Benjamin Ave.</p>
+            <p itemprop="telephone">Phone: 613-765-9334</p>
         </div>
         
         <!-- Middle: Copyright -->
-        <div class="footer-center">
+        <div class="footer-center text-center" role="contentinfo">
             <p>&copy; 2024 Greenview Hospital. All rights reserved.</p>
         </div>
 
         <!-- Right side: Page links -->
-        <div class="footer-right">
-            <a href="index.html">Home</a> <!-- Link to homepage -->
-            <a href="contact.html">Contact</a> <!-- Link to contact page -->
-            <a href="#">Patient Log In</a>
-            <a href="#">Staff Log In</a>
+        <div class="footer-right text-end" role="navigation">
+            <a href="index.html" role="link" itemprop="url">Home</a> <!-- Link to homepage -->
+            <a href="contact.html" role="link" itemprop="url">Contact</a> <!-- Link to contact page -->
+            <a href="#" role="link" itemprop="url">Patient Log In</a>
+            <a href="#" role="link" itemprop="url">Staff Log In</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
