@@ -8,7 +8,7 @@
     <style>
         /* Custom styles */
         .navbar-search input[type="text"] {
-            width: 600px; 
+            width: 90%; 
         }
         .nav-links {
             width: 100%;
@@ -30,6 +30,11 @@
         .footer-left, .footer-center, .footer-right {
             flex: 1; 
         }
+
+        .navbar-logo {
+            width: 130px;
+        }
+
         footer {
             border-top: 2px solid blue; 
         }
@@ -70,23 +75,23 @@
     <!-- Navbar -->
     <div id="top" class="navbar" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <!-- Logo -->
-        <img src="images/logo.jpg" alt="Logo" role="img" aria-label="Logo" itemprop="logo" class="logo-pic">
+        <img src="images/logo.jpg" alt="Logo" aria-label="Logo" itemprop="logo" class="navbar-logo">
         
         <!-- Search bar -->
         <div class="navbar-search" role="search">
-            <input type="text" placeholder="Search" role="textbox" itemprop="query-input">
+            <input type="text" placeholder="Search" itemprop="query-input">
             <span class="search-icon" role="button" aria-label="Search" itemprop="search-action">&#128269;</span>
         </div>
 
         <!-- Need help button -->
-        <button class="need-help-btn" role="button">Need Help?</button>
+        <button class="need-help-btn"> Need Help?</button>
 
         <!-- Navigation buttons -->
         <div class="nav-links" role="navigation">
-            <a href="index.html" role="link" itemprop="url" class="btn btn-primary">Home</a> <!-- Link to homepage -->
-            <a href="contact.html" role="link" itemprop="url" class="btn btn-primary">Contact Us</a> <!-- Link to contact page -->
-            <a href="#" role="link" itemprop="url" class="btn btn-primary">Patient Log In</a>
-            <a href="#" role="link" itemprop="url" class="btn btn-primary">Staff Log In</a>
+            <a href="index.html" itemprop="url" class="btn btn-primary">Home</a> <!-- Link to homepage -->
+            <a href="contact.html" itemprop="url" class="btn btn-primary">Contact Us</a> <!-- Link to contact page -->
+            <a href="#" itemprop="url" class="btn btn-primary">Patient Log In</a>
+            <a href="#" itemprop="url" class="btn btn-primary">Staff Log In</a>
         </div>
     </div>
     <a href="#footer" class="skip-link">Skip to Footer</a>
@@ -99,27 +104,27 @@
         
         <!-- Form -->
         <div class="form-container">
-            <form role="form" itemprop="mainEntity">
+            <form itemprop="mainEntity">
                 <label for="name" itemprop="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Name" role="textbox"><br>
+                <input type="text" id="name" name="name" placeholder="Name"><br>
                 
                 <label for="email" itemprop="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Email" role="textbox"><br>
+                <input type="email" id="email" name="email" placeholder="Email"><br>
                 
                 <label for="phone" itemprop="telephone">Phone:</label><br>
-                <input type="tel" id="phone" name="phone" placeholder="Phone" role="textbox"><br>
+                <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
                 
                 <label for="message" itemprop="text">Message:</label><br>
-                <textarea id="message" name="message" placeholder="Message" rows="4" role="textbox"></textarea><br>
+                <textarea id="message" name="message" placeholder="Message" rows="4"></textarea><br>
                 
-                <input type="submit" value="Submit" role="button" class="btn btn-primary">
+                <input type="submit" value="Submit" class="btn btn-primary">
             </form>
         </div>
     </div>
     <a href="#top" class="skip-link">Back to Top</a>
 
     <!-- Footer -->
-    <footer role="contentinfo" id="footer" class="d-flex">
+    <footer id="footer" class="d-flex">
         <!-- Left side: Address and phone number -->
         <div class="footer-left" role="contentinfo" itemscope itemtype="http://schema.org/PostalAddress">
             <p itemprop="streetAddress">32 Benjamin Ave.</p>
@@ -133,10 +138,10 @@
 
         <!-- Right side: Page links -->
         <div class="footer-right text-end" role="navigation">
-            <a href="index.html" role="link" itemprop="url">Home</a> <!-- Link to homepage -->
-            <a href="contact.html" role="link" itemprop="url">Contact</a> <!-- Link to contact page -->
-            <a href="#" role="link" itemprop="url">Patient Log In</a>
-            <a href="#" role="link" itemprop="url">Staff Log In</a>
+            <a href="index.html" itemprop="url">Home</a> <!-- Link to homepage -->
+            <a href="contact.html" itemprop="url">Contact</a> <!-- Link to contact page -->
+            <a href="#" itemprop="url">Patient Log In</a>
+            <a href="#" itemprop="url">Staff Log In</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin></script>
